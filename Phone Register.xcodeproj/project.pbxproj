@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		501A07261C28555E0016D60E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 501A07251C28555E0016D60E /* main.m */; };
 		501A07291C28555E0016D60E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 501A07281C28555E0016D60E /* AppDelegate.m */; };
-		501A072C1C28555E0016D60E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 501A072B1C28555E0016D60E /* ViewController.m */; };
+		501A072C1C28555E0016D60E /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 501A072B1C28555E0016D60E /* Register.m */; };
 		501A072F1C28555E0016D60E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501A072D1C28555E0016D60E /* Main.storyboard */; };
 		501A07321C28555E0016D60E /* Phone_Register.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 501A07301C28555E0016D60E /* Phone_Register.xcdatamodeld */; };
 		501A07341C28555E0016D60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501A07331C28555E0016D60E /* Assets.xcassets */; };
@@ -21,8 +21,8 @@
 		501A07251C28555E0016D60E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		501A07271C28555E0016D60E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		501A07281C28555E0016D60E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		501A072A1C28555E0016D60E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		501A072B1C28555E0016D60E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		501A072A1C28555E0016D60E /* Register.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Register.h; sourceTree = "<group>"; };
+		501A072B1C28555E0016D60E /* Register.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Register.m; sourceTree = "<group>"; };
 		501A072E1C28555E0016D60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		501A07311C28555E0016D60E /* Phone_Register.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Phone_Register.xcdatamodel; sourceTree = "<group>"; };
 		501A07331C28555E0016D60E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,10 +60,8 @@
 		501A07231C28555E0016D60E /* Phone Register */ = {
 			isa = PBXGroup;
 			children = (
-				501A07271C28555E0016D60E /* AppDelegate.h */,
-				501A07281C28555E0016D60E /* AppDelegate.m */,
-				501A072A1C28555E0016D60E /* ViewController.h */,
-				501A072B1C28555E0016D60E /* ViewController.m */,
+				501A073F1C2856160016D60E /* user */,
+				501A073E1C2855EA0016D60E /* Main */,
 				501A072D1C28555E0016D60E /* Main.storyboard */,
 				501A07331C28555E0016D60E /* Assets.xcassets */,
 				501A07351C28555E0016D60E /* LaunchScreen.storyboard */,
@@ -80,6 +78,24 @@
 				501A07251C28555E0016D60E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		501A073E1C2855EA0016D60E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				501A07271C28555E0016D60E /* AppDelegate.h */,
+				501A07281C28555E0016D60E /* AppDelegate.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		501A073F1C2856160016D60E /* user */ = {
+			isa = PBXGroup;
+			children = (
+				501A072A1C28555E0016D60E /* Register.h */,
+				501A072B1C28555E0016D60E /* Register.m */,
+			);
+			name = user;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				501A072C1C28555E0016D60E /* ViewController.m in Sources */,
+				501A072C1C28555E0016D60E /* Register.m in Sources */,
 				501A07321C28555E0016D60E /* Phone_Register.xcdatamodeld in Sources */,
 				501A07291C28555E0016D60E /* AppDelegate.m in Sources */,
 				501A07261C28555E0016D60E /* main.m in Sources */,
@@ -268,6 +284,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Phone Register/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cordero.Phone-Register";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -279,6 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Phone Register/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cordero.Phone-Register";
 				PRODUCT_NAME = "$(TARGET_NAME)";
