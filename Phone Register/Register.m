@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+        [[Digits sharedInstance]logOut];
+}
+
+- (void) initDigits{
     DGTAuthenticateButton *authButton;
     authButton = [DGTAuthenticateButton buttonWithAuthenticationCompletion:^(DGTSession *session, NSError *error) {
         if (session.userID) {
@@ -34,7 +38,7 @@
     }];
     authButton.center = self.view.center;
     [self.view addSubview:authButton];
-
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -43,4 +47,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnLoginPressed:(id)sender {
+    [[Digits sharedInstance] authenticateWithCompletion:^(DGTSession *session, NSError *error) {
+        // Inspect session/error objects
+        if (session !=nil) {
+            NSString *stPhone=session.phoneNumber;
+            self.lblPhone.text = [@"Teléfono: " stringByAppendingString:stPhone];
+        }
+    
+        [[Digits sharedInstance]logOut];
+    }];
+
+     
+}
 @end
+
